@@ -1,3 +1,59 @@
-<app-header></app-header>
+<section class="desktop" *ngIf="!mobile">
+	<app-header></app-header>
+	<router-outlet></router-outlet>
+	<app-footer></app-footer>
+    <section class="social">
+        <a href="https://fb.com/the.vishal.pandey" target="_blank"><button mat-button><i class="fa fa-facebook" aria-hidden="true" style="font-size: 30px; color: #3B5998;"></i></button></a>
+        <button mat-button><i class="fa fa-twitter" aria-hidden="true" style="font-size: 30px; color: #1dcaff;"></i></button>
+        <a href="https://api.whatsapp.com/send?phone=919717130893" target="_blank"><button mat-button><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 30px; color: #25D366;"></i></button></a>
+    </section>
+</section>
+
+
+
+<section class="mobile" *ngIf="mobile">
+	<mat-sidenav-container class="example-container">
+        <mat-sidenav #sidenav mode="over" opened="false" class="example-sidenav" [fixedInViewport]="'Fixed'" [fixedTopGap]="'0'" [fixedBottomGap]="'0'">
+        	<mat-toolbar class="hamburger-menu hamburger-menu-close" style=" overflow: initial;">
+        		<span>
+	        		<i class="fa fa-user" aria-hidden="true" style="font-size: 35px; color: white;"></i>&nbsp;&nbsp;
+	        		<i style="font-size: 15px;">Username</i><br>
+
+	        	</span>
+        		<span class="fill"></span>
+    	      <button mat-mini-fab (click)="sidenav.toggle()" style="background-color: transparent;"><i class="fa fa-close" aria-hidden="true" style="font-size: 25px; color: white;"></i></button>
+        	</mat-toolbar>
+        	<section class="hamburger-menu-content">
+                <button mat-button class="menu-button" (click)="sidenav.toggle()" routerLink="/">Home</button>
+                <button mat-button class="menu-button" (click)="sidenav.toggle()" routerLink="/">Login</button>
+                <button mat-button class="menu-button" (click)="sidenav.toggle()" routerLink="/">SignUp</button>
+
+                
+        	</section>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+          
+        	<mat-toolbar class="hamburger-menu">
+        		<span><h1>Learn Code Online</h1></span>
+    	      <button mat-button (click)="sidenav.toggle()"><i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;"></i></button>
+        	</mat-toolbar>
+            <section class="social-mobile">
+                <a href="https://fb.com/the.vishal.pandey" target="_blank"><button mat-raised-button><i class="fa fa-facebook" aria-hidden="true" style="font-size: 25px; color: #3B5998;"></i></button></a>
+                <button mat-raised-button><i class="fa fa-twitter" aria-hidden="true" style="font-size: 25px; color: #1dcaff;"></i></button>
+                <!-- <button mat-raised-button><i class="fa fa-google" aria-hidden="true" style="font-size: 25px; color: #4885ed;"></i></button> -->
+                <a href="https://api.whatsapp.com/send?phone=919717130893"><button mat-raised-button><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 25px; color: #4885ed;"></i></button></a>
+            </section>
+        	
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    <app-footer></app-footer>
+</section>
+
+
+
+
+<!-- <app-header></app-header>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer></app-footer> -->

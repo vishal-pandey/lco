@@ -1,8 +1,8 @@
 .header{
 	background-color: #009688;
 	display: flex;
-	/*color: rgb(230,255,230);*/
-	color: #E0F2F1;
+	color: rgb(255,255,255);
+	/*color: #E0F2F1;*/
 	align-items: center;
 	justify-content: space-between;
 }

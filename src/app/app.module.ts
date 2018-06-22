@@ -83,6 +83,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { MobileheaderComponent } from './components/mobileheader/mobileheader.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    MobileheaderComponent
   ],
   imports: [
     AppRoutingModule,

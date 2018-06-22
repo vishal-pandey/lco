@@ -17,4 +17,15 @@ export class HomeComponent implements OnInit {
   	this.questions = this.qS.getQuestion();
   }
 
+  theIndex = 0;
+
+
+  test(){
+    console.log("hi");
+    this.theIndex = 0;
+  }
+  test1(){
+    this.theIndex = 1;
+  }
+
 }
