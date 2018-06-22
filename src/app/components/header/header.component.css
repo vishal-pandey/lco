@@ -1,0 +1,12 @@
+.header{
+	background-color: #009688;
+	display: flex;
+	/*color: rgb(230,255,230);*/
+	color: #E0F2F1;
+	align-items: center;
+	justify-content: space-between;
+}
+.status-bar{
+	background-color: #00796B;
+	height: 10px;
+}

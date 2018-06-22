@@ -67,18 +67,30 @@ import {MatTableModule} from '@angular/material/table';
 
 
 
+// Import Highlight Js
+import { HighlightModule } from 'ngx-highlightjs';
 
 
+
+// Import Service
+import { QuestionService } from './services/question.service';
 
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,
@@ -118,8 +130,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    CommonModule
+    CommonModule,
+    HighlightModule.forRoot({ theme: 'atelier-estuary-light'})
   ],
-  providers: []
+  providers: [QuestionService]
 })
 export class AppModule { }

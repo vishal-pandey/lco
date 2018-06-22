@@ -1,0 +1,14 @@
+footer{
+	width: 100%;
+	background-color: #3b4c55;
+	color: #bdbdbd;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+footer a{
+	color: #bdbdbd;
+	text-decoration: none;
+}
