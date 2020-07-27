@@ -1,5 +1,5 @@
 # Task For Learn Code Online 
-Public Link http://lco.vishalpandey.xyz/
+Public Link https://vishal-pandey.github.io/lco/
 
 ## To run this project on your computer run
 * clone this repository
